@@ -47,7 +47,7 @@ public abstract class WeChatServiceSupport{
 	}
 
 	public String accept()  { 
-		SignatureParameter param = new SignatureParameter(request);
+	/*	SignatureParameter param = new SignatureParameter(request);
 		String signature = param.getSignature();
 		String timestamp = param.getTimestamp();
 		String nonce = param.getNonce();
@@ -60,7 +60,7 @@ public abstract class WeChatServiceSupport{
 		}
 		if (StringUtils.isNotBlank(echostr)) {
 			return echostr;
-		}
+		}*/
 		String result = dispatcher();
 		return result;
 	}
