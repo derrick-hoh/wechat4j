@@ -20,7 +20,7 @@ import com.alibaba.fastjson.JSONObject;
 * @date 2016年8月10日 下午6:41:10 
 *
  */
-public class WeChatUtil {
+public class WeChatUtils {
 	/**
 	 * 
 	* @Title: isSuccess 

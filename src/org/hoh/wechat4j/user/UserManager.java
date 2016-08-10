@@ -7,7 +7,7 @@ import org.apache.log4j.Logger;
 import org.hoh.wechat4j.cache.impl.AccessTokenCache;
 import org.hoh.wechat4j.enums.LanguageType;
 import org.hoh.wechat4j.exception.WeChatException;
-import org.hoh.wechat4j.utils.WeChatUtil;
+import org.hoh.wechat4j.utils.WeChatUtils;
 import org.sword.lang.HttpUtils;
 
 import com.alibaba.fastjson.JSON;
@@ -86,7 +86,7 @@ public class UserManager {
 		String resultStr = HttpUtils.get(url);
 		logger.info("return data " + resultStr);
 		try {
-			WeChatUtil.isSuccess(resultStr);
+			WeChatUtils.isSuccess(resultStr);
 		} catch (WeChatException e) {
 			logger.error(e.getMessage());
 			e.printStackTrace();
@@ -110,7 +110,7 @@ public class UserManager {
 		logger.info("request data " + requestData);
 		String resultStr = HttpUtils.post(USER_UPDATE_REMARK_POST_URL + AccessTokenCache.getInstance().getAccessToken(), requestData);
 		logger.info("return data " + resultStr);
-		WeChatUtil.isSuccess(resultStr);
+		WeChatUtils.isSuccess(resultStr);
 	}
 
 	/**
@@ -137,7 +137,7 @@ public class UserManager {
 		}
 		String resultStr = HttpUtils.get(url); 
 		try {
-			WeChatUtil.isSuccess(resultStr);
+			WeChatUtils.isSuccess(resultStr);
 		} catch (WeChatException e) {
 			logger.error(e.getMessage());
 			e.printStackTrace();
@@ -162,7 +162,7 @@ public class UserManager {
 		logger.info("request data " + requestData);
 		String resultStr = HttpUtils.post(GROUP_CREATE_POST_URL + AccessTokenCache.getInstance().getAccessToken(), requestData);
 		logger.info("return data " + resultStr);
-		WeChatUtil.isSuccess(resultStr);
+		WeChatUtils.isSuccess(resultStr);
 		return JSONObject.parseObject(resultStr).getObject("group", Group.class);
 	}
 
@@ -179,7 +179,7 @@ public class UserManager {
 		String resultStr = HttpUtils.post(GROUP_GET_POST_URL + AccessTokenCache.getInstance().getAccessToken());
 		logger.info("return data " + resultStr);
 		try {
-			WeChatUtil.isSuccess(resultStr);
+			WeChatUtils.isSuccess(resultStr);
 		} catch (WeChatException e) {
 			logger.error(e.getMessage());
 			e.printStackTrace();
@@ -209,7 +209,7 @@ public class UserManager {
 		String resultStr = HttpUtils.post(GROUP_GETID_POST_URL + AccessTokenCache.getInstance().getAccessToken(), requestData);
 		logger.info("return data " + resultStr);
 		try {
-			WeChatUtil.isSuccess(resultStr);
+			WeChatUtils.isSuccess(resultStr);
 		} catch (WeChatException e) {
 			logger.error(e.getMessage());
 			e.printStackTrace();
@@ -241,7 +241,7 @@ public class UserManager {
 		logger.info("request data " + requestData);
 		String resultStr = HttpUtils.post(GROUP_UPDATE_POST_URL + AccessTokenCache.getInstance().getAccessToken(), requestData);
 		logger.info("return data " + resultStr);
-		WeChatUtil.isSuccess(resultStr);
+		WeChatUtils.isSuccess(resultStr);
 	}
 
 	/**
@@ -263,7 +263,7 @@ public class UserManager {
 		logger.info("request data " + requestData);
 		String resultStr = HttpUtils.post(GROUP_MEMBERS_UPDATE_POST_URL + AccessTokenCache.getInstance().getAccessToken(), requestData);
 		logger.info("return data " + resultStr);
-		WeChatUtil.isSuccess(resultStr);
+		WeChatUtils.isSuccess(resultStr);
 	}
 
 	/**
@@ -285,7 +285,7 @@ public class UserManager {
 		logger.info("request data " + requestData);
 		String resultStr = HttpUtils.post(GROUP_MEMBERS_DATCHUPDATE_POST_URL + AccessTokenCache.getInstance().getAccessToken(), requestData);
 		logger.info("return data " + resultStr);
-		WeChatUtil.isSuccess(resultStr);
+		WeChatUtils.isSuccess(resultStr);
 	}
 
 	/**
@@ -307,6 +307,6 @@ public class UserManager {
 		logger.info("request data " + requestData);
 		String resultStr = HttpUtils.post(GROUP_DELETE_POST_URL + AccessTokenCache.getInstance().getAccessToken(), requestData);
 		logger.info("return data " + resultStr);
-		WeChatUtil.isSuccess(resultStr);
+		WeChatUtils.isSuccess(resultStr);
 	}
 }

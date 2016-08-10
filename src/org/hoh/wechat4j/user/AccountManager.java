@@ -7,7 +7,7 @@ import org.apache.log4j.Logger;
 import org.hoh.wechat4j.cache.impl.AccessTokenCache;
 import org.hoh.wechat4j.enums.QrcodeType;
 import org.hoh.wechat4j.exception.WeChatException;
-import org.hoh.wechat4j.utils.WeChatUtil;
+import org.hoh.wechat4j.utils.WeChatUtils;
 import org.sword.lang.HttpUtils;
 
 import com.alibaba.fastjson.JSONObject;
@@ -44,7 +44,7 @@ public class AccountManager {
 		String resultStr = HttpUtils.post(SHORTURL_POST_URL + AccessTokenCache.getInstance().getAccessToken(), requestData);
 		logger.info("return data " + resultStr);
 		try {
-			WeChatUtil.isSuccess(resultStr);
+			WeChatUtils.isSuccess(resultStr);
 		} catch (WeChatException e) {
 			logger.error(e.getMessage());
 			e.printStackTrace();
@@ -112,7 +112,7 @@ public class AccountManager {
 		String resultStr = HttpUtils.post(QRCODE_POST_URL + AccessTokenCache.getInstance().getAccessToken(), requestData);
 		logger.info("return data " + resultStr);
 		try {
-			WeChatUtil.isSuccess(resultStr);
+			WeChatUtils.isSuccess(resultStr);
 		} catch (WeChatException e) {
 			logger.error(e.getMessage());
 			e.printStackTrace();
