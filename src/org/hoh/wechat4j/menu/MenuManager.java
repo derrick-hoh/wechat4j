@@ -8,7 +8,7 @@ import org.hoh.wechat4j.cache.impl.AccessTokenCache;
 import org.hoh.wechat4j.enums.EventType;
 import org.sword.lang.HttpUtils;
 
-import com.google.gson.Gson; 
+import com.google.gson.Gson;
 
 /**
  * 
@@ -40,46 +40,27 @@ public class MenuManager {
 		Collection<Button> buttons = new ArrayList<Button>(3);
 		Button a = new Button();
 		a.setType(EventType.VIEW.name());
-		a.setName("微商城");
+		a.setName("信箱");
 		a.setUrl("http://wx.xhand.cn/index");
 
-/*		Button c = new Button();
-		c.setType(MenuEvent.CLICK.getEvent());
-		c.setName("生成二维码");
-		c.setKey("SPREAD_POSTER");*/
+		/*
+		 * Button c = new Button(); c.setType(MenuEvent.CLICK.getEvent());
+		 * c.setName("生成二维码"); c.setKey("SPREAD_POSTER");
+		 */
 
 		Button b = new Button();
-		b.setName("企业简介");
-		Collection<SubButton> subButtons = new ArrayList<SubButton>(5);
+		b.setName("附近的人");
+		b.setType(EventType.VIEW.name());
+		b.setUrl("http://wx.xhand.cn/index");
 
-		SubButton sba = new SubButton();
-		sba.setType(EventType.VIEW.name());
-		sba.setName("新手必读");
-		sba.setUrl("http://wx.xhand.cn/article/cat/1");
-		subButtons.add(sba);
-
-		SubButton sbb = new SubButton();
-		sbb.setType(EventType.VIEW.name());
-		sbb.setName("运营宝典");
-		sbb.setUrl("http://wx.xhand.cn/article/cat/1");
-		subButtons.add(sbb);
-
-		SubButton sbc = new SubButton();
-		sbc.setType(EventType.VIEW.name());
-		sbc.setName("新闻报道");
-		sbc.setUrl("http://wx.xhand.cn/article/cat/1");
-		subButtons.add(sbc);
-
-		SubButton sbd = new SubButton();
-		sbd.setType(EventType.VIEW.name());
-		sbd.setName("关于我们");
-		sbd.setUrl("http://wx.xhand.cn/about");
-		subButtons.add(sbd);
-		b.setSub_button(subButtons);
+		Button c = new Button();
+		c.setName("个人中心");
+		c.setType(EventType.VIEW.name());
+		c.setUrl("http://wx.xhand.cn/index");
 
 		buttons.add(a);
-	/*	buttons.add(c);*/
 		buttons.add(b);
+		buttons.add(c);
 
 		JsonMenu menu = new JsonMenu();
 		menu.setButton(buttons);
