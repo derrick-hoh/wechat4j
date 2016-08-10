@@ -103,6 +103,6 @@ public class MenuManager {
 	}
 
 	public static void main(String args[]) throws Exception {
-		System.out.println(create());
+		System.out.println(query());
 	}
 }
