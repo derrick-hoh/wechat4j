@@ -39,7 +39,7 @@ public class MenuManager {
 		String access_token = AccessTokenCache.getInstance().getAccessToken();
 		Collection<Button> buttons = new ArrayList<Button>(3);
 		Button a = new Button();
-		a.setType(EventType.VIEW.name());
+		a.setType(EventType.view.name());
 		a.setName("信箱");
 		a.setUrl("http://wx.xhand.cn/index");
 
@@ -50,12 +50,12 @@ public class MenuManager {
 
 		Button b = new Button();
 		b.setName("附近的人");
-		b.setType(EventType.VIEW.name());
+		b.setType(EventType.view.name());
 		b.setUrl("http://wx.xhand.cn/index");
 
 		Button c = new Button();
 		c.setName("个人中心");
-		c.setType(EventType.VIEW.name());
+		c.setType(EventType.view.name());
 		c.setUrl("http://wx.xhand.cn/index");
 
 		buttons.add(a);

@@ -12,3 +12,19 @@ To avoid this warning consider using the CacheManager factory methods to create 
 2016-08-10 10:32:47 WARN  DiskStorePathManager:162 - diskStorePath 'C:\Users\alove\AppData\Local\Temp' is already used by an existing CacheManager either in the same VM or in a different process.
 The diskStore path for this CacheManager will be set to C:\Users\alove\AppData\Local\Temp\ehcache_auto_created7855995865093620998diskstore.
 To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.
+2016-08-10 10:33:48 INFO  EhcacheHandler:30 - 初始化CacheManager
+2016-08-10 10:33:48 WARN  DiskStorePathManager:162 - diskStorePath 'C:\Users\alove\AppData\Local\Temp' is already used by an existing CacheManager either in the same VM or in a different process.
+The diskStore path for this CacheManager will be set to C:\Users\alove\AppData\Local\Temp\ehcache_auto_created1015722882784404979diskstore.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.
+2016-08-10 10:34:54 INFO  EhcacheHandler:30 - 初始化CacheManager
+2016-08-10 10:34:55 WARN  DiskStorePathManager:162 - diskStorePath 'C:\Users\alove\AppData\Local\Temp' is already used by an existing CacheManager either in the same VM or in a different process.
+The diskStore path for this CacheManager will be set to C:\Users\alove\AppData\Local\Temp\ehcache_auto_created6000699772790116748diskstore.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.
+2016-08-10 10:36:32 INFO  EhcacheHandler:30 - 初始化CacheManager
+2016-08-10 10:36:32 WARN  DiskStorePathManager:162 - diskStorePath 'C:\Users\alove\AppData\Local\Temp' is already used by an existing CacheManager either in the same VM or in a different process.
+The diskStore path for this CacheManager will be set to C:\Users\alove\AppData\Local\Temp\ehcache_auto_created8964712902795604364diskstore.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.
+2016-08-10 10:37:27 INFO  EhcacheHandler:30 - 初始化CacheManager
+2016-08-10 10:37:28 WARN  DiskStorePathManager:162 - diskStorePath 'C:\Users\alove\AppData\Local\Temp' is already used by an existing CacheManager either in the same VM or in a different process.
+The diskStore path for this CacheManager will be set to C:\Users\alove\AppData\Local\Temp\ehcache_auto_created4468612893894239143diskstore.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.
