@@ -41,7 +41,7 @@ public class MenuManager {
 		Button a = new Button();
 		a.setType(EventType.view.name());
 		a.setName("信箱");
-		a.setUrl("http://wx.xhand.cn/index");
+		a.setUrl("http://www.juuzhe.com");
 
 		/*
 		 * Button c = new Button(); c.setType(MenuEvent.CLICK.getEvent());
@@ -51,12 +51,12 @@ public class MenuManager {
 		Button b = new Button();
 		b.setName("附近的人");
 		b.setType(EventType.view.name());
-		b.setUrl("http://wx.xhand.cn/index");
+		b.setUrl("http://www.juuzhe.com");
 
 		Button c = new Button();
 		c.setName("个人中心");
 		c.setType(EventType.view.name());
-		c.setUrl("http://wx.xhand.cn/index");
+		c.setUrl("http://www.juuzhe.com");
 
 		buttons.add(a);
 		buttons.add(b);
