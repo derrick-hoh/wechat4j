@@ -21,6 +21,7 @@ public class Config {
 	private Properties properties = null;
 	private String url = null;;
 	private String token = null;;
+	private String redirectUrl = null;
 	private String encodingAESKey = null;;
 	private String appid = null;;
 	private String appSecret = null;;
@@ -149,6 +150,9 @@ public class Config {
 			this.appSecret = properties.getProperty("wechat.appsecret");
 			if (StringUtils.isNotBlank(appSecret))
 				this.appSecret = this.appSecret.trim();
+			this.redirectUrl = properties.getProperty("wechat.redirect.url");
+			if (StringUtils.isNoneBlank(redirectUrl))
+				this.redirectUrl = this.redirectUrl.trim();
 			this.mchId = properties.getProperty("wechat.mch.id");
 			if (StringUtils.isNotBlank(url))
 				this.mchId = this.mchId.trim();
