@@ -30,8 +30,8 @@
 		maxElementsInMemory="1000000"
 		eternal="false"
 		overflowToDisk="true"
-		timeToIdleSeconds="7200"
-		timeToLiveSeconds="7200"
+		timeToIdleSeconds="7000"
+		timeToLiveSeconds="7000"
 		memoryStoreEvictionPolicy="LFU">
 	</cache>
     
