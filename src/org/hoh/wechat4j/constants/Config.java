@@ -27,8 +27,8 @@ public class Config {
 	private String appSecret = null;;
 	private String mchId = null;;
 	private String mchKey = null;;
-	private String accessTokenServer = null;;
-	private String jsApiTicketServer = null;;
+	private String accessTokenServer = null;
+	private String jsApiTicketServer = null;
 	private static Config config = new Config();
 
 	public static Config instance() {
@@ -125,6 +125,15 @@ public class Config {
 
 	public Config getConfig() {
 		return config;
+	}
+	
+
+	public String getRedirectUrl() {
+		return redirectUrl;
+	}
+
+	public void setRedirectUrl(String redirectUrl) {
+		this.redirectUrl = redirectUrl;
 	}
 
 	private Config() {
