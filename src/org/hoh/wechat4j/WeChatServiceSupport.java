@@ -8,8 +8,10 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
+import org.hoh.wechat4j.constants.Config;
 import org.hoh.wechat4j.enums.EventType;
 import org.hoh.wechat4j.enums.MsgType;
+import org.hoh.wechat4j.parameter.SignatureParameter;
 import org.hoh.wechat4j.request.WechatRequest;
 import org.hoh.wechat4j.response.ArticleResponse;
 import org.hoh.wechat4j.response.ImageResponse;
@@ -21,6 +23,7 @@ import org.hoh.wechat4j.response.WechatResponse;
 import org.hoh.wechat4j.utils.JaxbParserUtils;
 import org.hoh.wechat4j.utils.JaxbParserUtils.CollectionWrapper;
 import org.hoh.wechat4j.utils.StreamUtils;
+import org.hoh.wechat4j.validate.SignatureValidate;
 
 /**
  * 
@@ -44,7 +47,7 @@ public abstract class WeChatServiceSupport{
 	}
 
 	public String accept()  { 
-	/*	SignatureParameter param = new SignatureParameter(request);
+		SignatureParameter param = new SignatureParameter(request);
 		String signature = param.getSignature();
 		String timestamp = param.getTimestamp();
 		String nonce = param.getNonce();
@@ -57,7 +60,7 @@ public abstract class WeChatServiceSupport{
 		}
 		if (StringUtils.isNotBlank(echostr)) {
 			return echostr;
-		}*/
+		}
 		String result = dispatcher();
 		return result;
 	}

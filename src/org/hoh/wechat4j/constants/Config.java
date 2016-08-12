@@ -160,7 +160,7 @@ public class Config {
 			if (StringUtils.isNotBlank(appSecret))
 				this.appSecret = this.appSecret.trim();
 			this.redirectUrl = properties.getProperty("wechat.redirect.url");
-			if (StringUtils.isNoneBlank(redirectUrl))
+			if (StringUtils.isNotBlank(redirectUrl))
 				this.redirectUrl = this.redirectUrl.trim();
 			this.mchId = properties.getProperty("wechat.mch.id");
 			if (StringUtils.isNotBlank(url))
