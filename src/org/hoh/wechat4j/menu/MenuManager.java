@@ -40,8 +40,8 @@ public class MenuManager {
 		Collection<Button> buttons = new ArrayList<Button>(3);
 		Button a = new Button();
 		a.setType(EventType.view.name());
-		a.setName("信箱");
-		a.setUrl("http://www.juuzhe.com");
+		a.setName("微商城");
+		a.setUrl("http://trzm.xhand.cn");
 
 		/*
 		 * Button c = new Button(); c.setType(MenuEvent.CLICK.getEvent());
@@ -49,12 +49,12 @@ public class MenuManager {
 		 */
 
 		Button b = new Button();
-		b.setName("附近的人");
-		b.setType(EventType.view.name());
-		b.setUrl("http://www.juuzhe.com");
+		b.setName("生成二维码");
+		b.setType(EventType.scancode_push.name());
+		b.setKey("POSTER");
 
 		Button c = new Button();
-		c.setName("个人中心");
+		c.setName("企业介绍");
 		c.setType(EventType.view.name());
 		c.setUrl("http://www.juuzhe.com");
 
@@ -103,6 +103,6 @@ public class MenuManager {
 	}
 
 	public static void main(String args[]) throws Exception {
-		System.out.println(query());
+		System.out.println(create());
 	}
 }
