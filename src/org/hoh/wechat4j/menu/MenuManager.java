@@ -50,7 +50,7 @@ public class MenuManager {
 
 		Button b = new Button();
 		b.setName("生成二维码");
-		b.setType(EventType.scancode_push.name());
+		b.setType(EventType.SCAN.name());
 		b.setKey("POSTER");
 
 		Button c = new Button();
