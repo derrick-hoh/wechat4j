@@ -21,7 +21,7 @@ import com.alibaba.fastjson.JSONObject;
 *
  */
 public class AccountManager {
-	Logger logger = Logger.getLogger(AccountManager.class);
+	private static Logger logger = Logger.getLogger(AccountManager.class);
 
 	//长链接转短链接接口
 	private static final String SHORTURL_POST_URL = "https://api.weixin.qq.com/cgi-bin/shorturl?access_token=";
@@ -84,11 +84,11 @@ public class AccountManager {
 	 * @return
 	 * @throws Exception 
 	 */
-	public Qrcode createQrcodeTemporary(long sceneId, int expireSeconds) throws Exception {
+	public static Qrcode createQrcodeTemporary(long sceneId, int expireSeconds) throws Exception {
 		return createQrcodeTicket(QrcodeType.QR_SCENE, expireSeconds, sceneId, null);
 	}
 
-	private Qrcode createQrcodeTicket(QrcodeType qrcodeType, Integer expireSeconds, Long sceneId, String sceneStr) throws Exception {
+	private static Qrcode createQrcodeTicket(QrcodeType qrcodeType, Integer expireSeconds, Long sceneId, String sceneStr) throws Exception {
 		JSONObject ticketJson = new JSONObject();
 		ticketJson.put("action_name", qrcodeType);
 		JSONObject sceneJson = new JSONObject();
@@ -120,6 +120,10 @@ public class AccountManager {
 		}
 		Qrcode qrcode = JSONObject.parseObject(resultStr, Qrcode.class);
 		return qrcode;
+	}
+	
+	public static void main(String[] args) throws Exception{
+		createQrcodeTemporary(10024, 7200);
 	}
 
 }

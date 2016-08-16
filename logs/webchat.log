@@ -6,3 +6,6 @@
 2016-08-13 04:18:51 INFO  EhcacheHandler:30 - 初始化CacheManager
 2016-08-13 04:19:01 INFO  EhcacheHandler:30 - 初始化CacheManager
 2016-08-13 04:20:29 INFO  EhcacheHandler:30 - 初始化CacheManager
+2016-08-14 08:42:25 INFO  AccountManager:111 - request data {"action_info":{"scene":{"scene_id":10024}},"action_name":"QR_SCENE","expire_seconds":7200}
+2016-08-14 08:42:25 INFO  EhcacheHandler:30 - 初始化CacheManager
+2016-08-14 08:42:27 INFO  AccountManager:113 - return data {"ticket":"gQGt8DoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xLzBFVTlZVExsdTA3Q3d2N2tWR3NXAAIEZL2vVwMEIBwAAA==","expire_seconds":7200,"url":"http:\/\/weixin.qq.com\/q\/0EU9YTLlu07Cwv7kVGsW"}
